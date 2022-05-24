@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BusinessLayer.Concreate;
+using DataAccessLayer.EntityFramework;
+using Microsoft.AspNetCore.Mvc;
 
 namespace MvcLayer.Controllers
 {
@@ -6,7 +8,9 @@ namespace MvcLayer.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            CategoryManager cm = new CategoryManager(new EFCategoryRepository());
+            var values = cm.GetList();
+            return View(values);
         }
     }
 }
