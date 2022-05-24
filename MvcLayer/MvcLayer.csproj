@@ -7,6 +7,77 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\about.html" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\blog1.html" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\blog2.html" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\blog3.html" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\contact.html" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\css\bootstrap.css" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\css\contact.css" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\css\fontawesome-all.css" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\css\jquery.desoslide.css" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\css\single.css" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\css\style.css" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\1.jpg" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\2.jpg" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\3.jpg" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\4.jpg" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\5.jpg" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\6.jpg" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\7.jpg" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\8.jpg" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\b1.jpg" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\b2.jpg" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\b3.jpg" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\b4.jpg" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\b5.jpg" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\banner1.jpg" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\banner2.jpg" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\banner3.jpg" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\banner4.jpg" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\banner5.jpg" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\left.png" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\m1.jpg" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\m2.jpg" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\m3.jpg" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\m4.jpg" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\right.png" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\t1.jpg" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\t2.jpg" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\t3.jpg" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\t4.jpg" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\Thumbs.db" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\images\top_up.png" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\index.html" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\js\bootstrap.js" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\js\easing.js" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\js\jquery-2.2.3.min.js" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\js\jquery.desoslide.js" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\js\jquery.flexisel.js" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\js\modernizr.custom.min.js" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\js\move-top.js" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\login.html" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\register.html" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\single.html" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\w3layouts-license.txt" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\webfonts\fa-brands-400.eot" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\webfonts\fa-brands-400.svg" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\webfonts\fa-brands-400.ttf" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\webfonts\fa-brands-400.woff" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\webfonts\fa-brands-400.woff2" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\webfonts\fa-regular-400.eot" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\webfonts\fa-regular-400.svg" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\webfonts\fa-regular-400.ttf" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\webfonts\fa-regular-400.woff" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\webfonts\fa-regular-400.woff2" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\webfonts\fa-solid-900.eot" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\webfonts\fa-solid-900.svg" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\webfonts\fa-solid-900.ttf" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\webfonts\fa-solid-900.woff" />
+    <None Include="wwwroot\CoreBlogTema-main\CoreBlogTema-main\CoreBlogTema\web\webfonts\fa-solid-900.woff2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.5">
       <PrivateAssets>all</PrivateAssets>

@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MvcLayer.Controllers
 {
-    public class Category : Controller
+    public class CategoryController : Controller
     {
         public IActionResult Index()
         {
