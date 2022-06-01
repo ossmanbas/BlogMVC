@@ -14,7 +14,8 @@ namespace MvcLayer.Controllers
         }
         public IActionResult BlogDetails(int id)
         {
-            return View();
+            var blog = bm.GetBlogById(id);
+            return View(blog);
         }
     }
 }
