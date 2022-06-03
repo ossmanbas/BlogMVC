@@ -51,5 +51,10 @@ namespace BusinessLayer.Concreate
         {
             throw new NotImplementedException();
         }
+
+        public List<Blog> GetBlogListByWriter(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
