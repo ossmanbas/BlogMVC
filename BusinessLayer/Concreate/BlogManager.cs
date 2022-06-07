@@ -54,7 +54,7 @@ namespace BusinessLayer.Concreate
 
         public List<Blog> GetBlogListByWriter(int id)
         {
-            throw new NotImplementedException();
+            return _blogDAL.GetAll(b => b.WriterID==id);
         }
     }
 }

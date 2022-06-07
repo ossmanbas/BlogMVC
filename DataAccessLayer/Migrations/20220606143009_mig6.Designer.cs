@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20220603141823_mig6")]
+    [Migration("20220606143009_mig6")]
     partial class mig6
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -244,15 +244,15 @@ namespace DataAccessLayer.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("EntityLayer.Concreate.Writer", "Writers")
-                        .WithMany("Blog")
+                    b.HasOne("EntityLayer.Concreate.Writer", "Writer")
+                        .WithMany("Blogs")
                         .HasForeignKey("WriterID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Category");
 
-                    b.Navigation("Writers");
+                    b.Navigation("Writer");
                 });
 
             modelBuilder.Entity("EntityLayer.Concreate.Comment", b =>
@@ -278,7 +278,7 @@ namespace DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.Concreate.Writer", b =>
                 {
-                    b.Navigation("Blog");
+                    b.Navigation("Blogs");
                 });
 #pragma warning restore 612, 618
         }

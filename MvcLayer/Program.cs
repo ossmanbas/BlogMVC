@@ -18,6 +18,8 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseStatusCodePagesWithReExecute("/ErrorPage/Error1", "?code={0}"); //Herhangi bir 404 hatasý alýndýðýnda yönlendirelecek sayfa
+
 app.UseAuthorization();
 
 app.MapControllerRoute(
