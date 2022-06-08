@@ -1,9 +1,39 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Authorization;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+//Proje seviyesinde Authorize iþlemi -->
+builder.Services.AddMvc(config =>
+{
+    var policy = new AuthorizationPolicyBuilder()
+    .RequireAuthenticatedUser()
+    .Build();
+    config.Filters.Add(new AuthorizeFilter(policy));
+    
+
+});
+// <-- Proje seviyesinde Authorize iþlemi 
+
+//Oturum AÇ sayfasýna yönlendirme -->
+builder.Services.AddMvc();
+builder.Services.AddAuthentication(
+    CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(x=>
+    {
+        x.LoginPath = "/Login/Index/";
+    }
+
+    );
+// <-- Oturum AÇ sayfasýna yönlendirme
+
+builder.Services.AddSession();
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -15,9 +45,10 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+app.UseAuthentication();
 
 app.UseRouting();
-
+app.UseSession();
 app.UseStatusCodePagesWithReExecute("/ErrorPage/Error1", "?code={0}"); //Herhangi bir 404 hatasý alýndýðýnda yönlendirelecek sayfa
 
 app.UseAuthorization();
