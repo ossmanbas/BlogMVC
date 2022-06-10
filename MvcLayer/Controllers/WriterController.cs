@@ -11,15 +11,22 @@ namespace MvcLayer.Controllers
         {
             return View();
         }
+        
 
         public IActionResult WriterProfile()
         {
             return View();
         }
 
+         [AllowAnonymous]
         public IActionResult Test()
         {
             return View();
+        }
+         [AllowAnonymous]
+        public PartialViewResult WriterNavbarPartial()
+        {
+            return PartialView();
         }
     }
 }
