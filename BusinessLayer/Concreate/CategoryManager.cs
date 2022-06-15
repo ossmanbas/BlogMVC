@@ -13,36 +13,29 @@ namespace BusinessLayer.Concreate
     public class CategoryManager : ICategoryService
     {
         ICategoryDAL _categoryDAL;
-      
-
         public CategoryManager(ICategoryDAL categoryDAL)
         {
             _categoryDAL = categoryDAL;
         }
-
-        public void AddCategory(Category category)
+        public void TAdd(Category t)
         {
-             _categoryDAL.Insert(category);
+            _categoryDAL.Insert(t);
         }
-
-        public Category GetCategoryById(int id)
+        public void TRemove(Category t)
         {
-           return _categoryDAL.GetByID(id);
+            _categoryDAL.Delete(t);
         }
-
+        public void TUpdate(Category t)
+        {
+            _categoryDAL.Update(t);
+        }
+        public Category GetById(int id)
+        {
+            return _categoryDAL.GetByID(id);
+        }
         public List<Category> GetList()
         {
-           return _categoryDAL.GetAll();
-        }
-
-        public void RemoveCategory(Category category)
-        {
-           _categoryDAL.Delete(category);
-        }
-
-        public void UpdateCategory(Category category)
-        {
-          _categoryDAL.Update(category);
+            return _categoryDAL.GetAll();
         }
     }
 }
