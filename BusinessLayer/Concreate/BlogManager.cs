@@ -51,7 +51,7 @@ namespace BusinessLayer.Concreate
 
         public void TAdd(Blog t)
         {
-            throw new NotImplementedException();
+            _blogDAL.Insert(t);
         }
 
         public void TRemove(Blog t)
