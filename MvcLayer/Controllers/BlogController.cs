@@ -22,11 +22,23 @@ namespace MvcLayer.Controllers
             var blog = bm.GetBlogById(id);
             return View(blog);
         }
+
         public IActionResult BlogListByWriter()
         {
-            var values = bm.GetBlogListByWriter(1);
+            var values = bm.GetListWithCategoryByWriterBm(1);
             return View(values);
         }
+
+        public IActionResult DeleteBlog(int id)
+        {
+            var blogvalue = bm.TGetById(id);
+            bm.TRemove(blogvalue);
+            return RedirectToAction("BlogListByWriter");
+
+        }
+
+
+
         [HttpGet]
         public IActionResult BlogAdd()
         {
@@ -51,8 +63,8 @@ namespace MvcLayer.Controllers
             {
                 p.BlogStatus = true;
                 p.BlogCreateDate = DateTime.Parse(DateTime.Now.ToShortDateString());
-                p.WriterID = 1;
-                p.BlogID = 15;
+                p.WriterID = 2;
+                p.BlogID = 18;
                 bm.TAdd(p);
                 return RedirectToAction("BlogListByWriter", "Blog");
             }
