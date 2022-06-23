@@ -10,6 +10,7 @@ namespace MvcLayer.Controllers
 {
     public class BlogController : Controller
     {
+        CategoryManager cm = new CategoryManager(new EFCategoryRepository());
         BlogManager bm = new BlogManager(new EFBlogRepository());
         public IActionResult Index()
         {
@@ -37,12 +38,14 @@ namespace MvcLayer.Controllers
 
         }
 
+      
+
 
 
         [HttpGet]
         public IActionResult BlogAdd()
         {
-            CategoryManager cm = new CategoryManager(new EFCategoryRepository());
+           
             List<SelectListItem> Kategoriler = (from x in cm.GetList()
                                                 select new SelectListItem
                                                 {
@@ -53,18 +56,26 @@ namespace MvcLayer.Controllers
 
             return View();
         }
+
         [HttpPost]
         public IActionResult BlogAdd(Blog p)
         {
 
-            BlogValidator bv = new BlogValidator ();     // Validatorde yazdığımız koşulların kontrolü için
+            BlogValidator bv = new BlogValidator();     // Validatorde yazdığımız koşulların kontrolü için
             ValidationResult result = bv.Validate(p);   // Validatorde yazdığımız koşulların kontrolü için
             if (result.IsValid)                         // Validatorde yazdığımız koşulların kontrolü için
             {
+                List<SelectListItem> Kategoriler = (from x in cm.GetList()
+                                                    select new SelectListItem
+                                                    {
+                                                        Text = x.CategoryName,
+                                                        Value = x.CategoryID.ToString()
+                                                    }).ToList();
+
                 p.BlogStatus = true;
                 p.BlogCreateDate = DateTime.Parse(DateTime.Now.ToShortDateString());
                 p.WriterID = 2;
-                p.BlogID = 18;
+                p.BlogID = 19;
                 bm.TAdd(p);
                 return RedirectToAction("BlogListByWriter", "Blog");
             }

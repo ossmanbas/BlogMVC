@@ -40,6 +40,7 @@
                                 <h5 class="card-title">
                                     <a href="/Blog/BlogDetails/@item.BlogID">@item.BlogTitle</a>
                                 </h5>
+                              @*  <p class="card-text mb-3">@item.BlogContent.Substring(0,130)</p>*@
                                 <p class="card-text mb-3">@item.BlogContent.Substring(0,item.BlogContent.Substring(0,130).LastIndexOf(" "))...</p>
                                 <a href="/Blog/BlogDetails/@item.BlogID/" class="btn btn-primary read-m">Devamını Oku...</a>
                             </div>
