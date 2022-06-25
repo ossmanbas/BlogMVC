@@ -18,9 +18,35 @@ namespace BusinessLayer.Concreate
             this._writerDAL = writerDAL;
         }
 
-        public void AddWriter(Writer writer)
+
+        public List<Writer> GetList()
         {
-            _writerDAL.Insert(writer);
+            throw new NotImplementedException();
+        }
+
+        public List<Writer> GetWriterByID(int id)
+        {
+            return _writerDAL.GetAll(x => x.WriterID == id);
+        }
+
+        public void TAdd(Writer t)
+        {
+            _writerDAL.Insert(t);
+        }
+
+        public Writer TGetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TRemove(Writer t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TUpdate(Writer t)
+        {
+            throw new NotImplementedException();
         }
     }
 }

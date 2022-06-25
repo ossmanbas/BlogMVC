@@ -3,6 +3,7 @@ using BusinessLayer.ValidationRules;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concreate;
 using FluentValidation.Results;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -12,6 +13,8 @@ namespace MvcLayer.Controllers
     {
         CategoryManager cm = new CategoryManager(new EFCategoryRepository());
         BlogManager bm = new BlogManager(new EFBlogRepository());
+
+       
         public IActionResult Index()
         {
             var values = bm.GetBlogListWithCategory();
@@ -87,6 +90,32 @@ namespace MvcLayer.Controllers
                 }
             }
             return View();
+        }
+
+        [HttpGet]
+        public IActionResult EditBlog(int id)
+        {
+            var blogvalue = bm.TGetById(id);
+            List<SelectListItem> Kategoriler = (from x in cm.GetList()
+                                                select new SelectListItem
+                                                {
+                                                    Text = x.CategoryName,
+                                                    Value = x.CategoryID.ToString()
+                                                }).ToList();
+            ViewBag.kategori = Kategoriler;
+            return View(blogvalue);
+
+        }
+        
+        [HttpPost]
+        public IActionResult EditBlog(Blog b)
+        {
+            var blogValue = bm.TGetById(b.BlogID);
+            b.BlogCreateDate  = DateTime.Parse(blogValue.BlogCreateDate.ToShortDateString());
+            b.WriterID = 1;
+            b.BlogStatus = true;
+            bm.TUpdate(b);
+            return RedirectToAction("BlogListByWriter");
         }
     }
 }

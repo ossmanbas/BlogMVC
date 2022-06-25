@@ -61,7 +61,7 @@ namespace BusinessLayer.Concreate
 
         public void TUpdate(Blog t)
         {
-            throw new NotImplementedException();
+            _blogDAL.Update(t);
         }
 
         public List<Blog> GetListWithCategoryByWriterBm(int id)

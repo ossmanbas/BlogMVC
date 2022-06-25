@@ -1,0 +1,30 @@
+﻿@model EntityLayer.Concreate.Blog
+@{
+    ViewData["Title"] = "EditBlog";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+<h1>Blog Düzenleme Sayfası</h1>
+@using(Html.BeginForm("EditBlog","Blog",FormMethod.Post))
+{
+    @Html.Label("Blog ID")
+    @Html.TextBoxFor(x=>x.BlogID, new {@class ="form-control"})
+    <br />
+    @Html.Label("Blog Başlığı")
+    @Html.TextBoxFor(x=>x.BlogTitle, new {@class ="form-control"})
+    <br />
+    @Html.Label("Blog Kategorisi")
+    @Html.DropDownListFor(x=>x.CategoryID,(List<SelectListItem>)ViewBag.kategori, new {@class ="form-control"})
+    <br />
+    @Html.Label("Blog Thumbnail Url")
+    @Html.TextBoxFor(x=>x.BlogThumbnailImage, new {@class ="form-control"})
+    <br />
+    @Html.Label("Blog Görseli")
+    @Html.TextBoxFor(x=>x.Image, new {@class ="form-control"})
+    <br />
+    @Html.Label("Blog Yazısı")
+    @Html.TextAreaFor(x=>x.BlogContent,10,5, new {@class ="form-control"})
+    <br />
+    <button class="btn btn-outline-success">Güncelle</button>
+}
+

@@ -3,6 +3,7 @@ using BusinessLayer.ValidationRules;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concreate;
 using FluentValidation.Results;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MvcLayer.Controllers
@@ -16,11 +17,13 @@ namespace MvcLayer.Controllers
         WriterManager wm = new WriterManager(new EFWriterRepository());
 
         [HttpGet]
+        [AllowAnonymous]
         public IActionResult Index()
         {
             return View();
         }
         [HttpPost]
+
         public IActionResult Index(Writer p)
         {
             WriterValidator wv = new WriterValidator(); // Validatorde yazdığımız koşulların kontrolü için
@@ -29,7 +32,7 @@ namespace MvcLayer.Controllers
             {
                 p.WriterStatus = true;
                 p.WriterAbaout = "hebele hübele";
-                wm.AddWriter(p);
+                wm.TAdd(p);
                 return RedirectToAction("Index", "Blog");
             }
             else
