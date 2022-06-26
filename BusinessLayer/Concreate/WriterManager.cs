@@ -36,7 +36,7 @@ namespace BusinessLayer.Concreate
 
         public Writer TGetById(int id)
         {
-            throw new NotImplementedException();
+          return  _writerDAL.GetByID(id);
         }
 
         public void TRemove(Writer t)
@@ -46,7 +46,8 @@ namespace BusinessLayer.Concreate
 
         public void TUpdate(Writer t)
         {
-            throw new NotImplementedException();
+            _writerDAL.Update(t);
+
         }
     }
 }
