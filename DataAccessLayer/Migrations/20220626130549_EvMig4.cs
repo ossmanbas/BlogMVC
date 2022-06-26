@@ -4,7 +4,7 @@
 
 namespace DataAccessLayer.Migrations
 {
-    public partial class mig5 : Migration
+    public partial class EvMig4 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

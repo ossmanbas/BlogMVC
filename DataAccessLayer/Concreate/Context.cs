@@ -13,7 +13,8 @@ namespace DataAccessLayer.Concreate
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseNpgsql(@"Server=127.0.0.1;Port=5432;Database=myBlog;User Id=postgres;Password=a77ecef7;");
-            //optionsBuilder.UseSqlServer(@"")     
+              //optionsBuilder.UseSqlServer("Server = DESKTOP-R3A8UBN; Database = myBlog;Trusted_Connection=True");
+               
         }
         public DbSet<About>  Abouts { get; set; }
         public DbSet<Blog> Blogs { get; set; }
@@ -21,14 +22,6 @@ namespace DataAccessLayer.Concreate
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Writer> Writers { get; set; }
-
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    base.OnModelCreating(modelBuilder);
-
-        //    modelBuilder.Entity<Blog>().HasData(new Blog { });
-            
-        //}
 
     }
 }
