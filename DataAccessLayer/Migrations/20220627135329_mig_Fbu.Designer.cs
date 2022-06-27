@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20220626125521_EvMig2")]
-    partial class EvMig2
+    [Migration("20220627135329_mig_Fbu")]
+    partial class mig_Fbu
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -198,6 +198,37 @@ namespace DataAccessLayer.Migrations
                     b.HasKey("ContactID");
 
                     b.ToTable("Contacts");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concreate.Notification", b =>
+                {
+                    b.Property<int>("NotificationID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("NotificationID"), 1L, 1);
+
+                    b.Property<DateTime>("NotificationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("NotificationDetails")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("NotificationStatus")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("NotificationType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NotificationTypeSymbol")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("NotificationID");
+
+                    b.ToTable("Notifications");
                 });
 
             modelBuilder.Entity("EntityLayer.Concreate.Writer", b =>

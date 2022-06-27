@@ -12,8 +12,8 @@ namespace DataAccessLayer.Concreate
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql(@"Server=127.0.0.1;Port=5432;Database=myBlog;User Id=postgres;Password=a77ecef7;");
-              //optionsBuilder.UseSqlServer("Server = DESKTOP-R3A8UBN; Database = myBlog;Trusted_Connection=True");
+            //optionsBuilder.UseNpgsql(@"Server=127.0.0.1;Port=5432;Database=myBlog;User Id=postgres;Password=a77ecef7;");
+            optionsBuilder.UseSqlServer(@"Server =(localdb)\mssqllocaldb; Database = myBlog;Trusted_Connection=True");
                
         }
         public DbSet<About>  Abouts { get; set; }

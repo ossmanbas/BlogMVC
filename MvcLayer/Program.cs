@@ -10,15 +10,15 @@ builder.Services.AddControllersWithViews();
 //Proje seviyesinde Authorize iþlemi -->
 
 builder.Services.AddSession();
-//builder.Services.AddMvc(config =>
-//{
-//    var policy = new AuthorizationPolicyBuilder()
-//    .RequireAuthenticatedUser()
-//    .Build();
-//    config.Filters.Add(new AuthorizeFilter(policy));
-    
+builder.Services.AddMvc(config =>
+{
+    var policy = new AuthorizationPolicyBuilder()
+    .RequireAuthenticatedUser()
+    .Build();
+    config.Filters.Add(new AuthorizeFilter(policy));
 
-//});
+
+});
 // <-- Proje seviyesinde Authorize iþlemi 
 
 //Oturum AÇ sayfasýna yönlendirme -->
