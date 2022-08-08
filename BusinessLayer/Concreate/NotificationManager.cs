@@ -20,7 +20,7 @@ namespace BusinessLayer.Concreate
 
         public List<Notification> GetList()
         {
-            throw new NotImplementedException();
+          return _notificationDAL.GetAll();
         }
 
         public void TAdd(Notification t)

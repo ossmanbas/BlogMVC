@@ -6,11 +6,11 @@ namespace MvcLayer.ViewComponents.Notification
 {
     public class NotificationList : ViewComponent
     {
-        BlogManager bm = new BlogManager(new EFBlogRepository());
+        NotificationManager nm = new NotificationManager(new EFNotificationRepository());
 
         public IViewComponentResult Invoke()
         {
-            var values = bm.GetBlogListWithCategory();
+            var values = nm.GetList();
             return View(values);
         }
     }

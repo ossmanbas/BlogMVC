@@ -74,15 +74,15 @@
                             <i class="mdi mdi-email-outline"></i>
                             <span class="count-symbol bg-warning"></span>
                         </a>
-                       
+
                     </li>
-                    <li class="nav-item dropdown">
+                   @* <li class="nav-item dropdown">
                         <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
                             <i class="mdi mdi-bell-outline"></i>
                             <span class="count-symbol bg-danger"></span>
                         </a>
-                        
-                    </li>
+
+                    </li>*@
                     <li class="nav-item nav-logout d-none d-lg-block">
                         <a class="nav-link" href="#">
                             <i class="mdi mdi-power"></i>
@@ -101,12 +101,12 @@
         </nav>
         <div class="container-fluid page-body-wrapper">
             @await Html.PartialAsync("/Views/Writer/WriterNavbarPartial.cshtml")
-           
+
             <div class="main-panel">
                 <div class="content-wrapper">
-                @RenderBody()
+                    @RenderBody()
                 </div>
-                
+
             </div>
         </div>
     </div>
